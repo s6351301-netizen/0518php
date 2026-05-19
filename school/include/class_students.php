@@ -132,13 +132,14 @@ a.del-btn {
 }
 </style>
 <h2><?= $_GET['code']; ?>班級學生列表</h2>
-<a href="?inc=add_student" class='add-btn'>新增學生</a>
+<a href="?inc=add_student&code=<?= $_GET['code']; ?>" class='add-btn'>新增學生</a>
 
 <?php 
 //從class_student 中找到班級學生的學號
 include "db_conn.php";
 //$sql="select * from `class_student` where `class_code`='{$_GET['code']}'";
-$sql="select `students`.`school_num`,
+$sql="select 
+             `students`.`school_num`,
              `students`.`name`,
              `dept`.`name` as 'dept_name',
              `addr`,
@@ -196,8 +197,8 @@ foreach($students as $student):?>
                 <span class="value"><?= $student['graduate_school']; ?></span>
             </div>
             <div class="btn-row">
-                <a class="edit-btn" href="">編輯</a>
-                <a class="del-btn" href="">刪除</a>
+                <a class="edit-btn" href="?inc=edit_student&num=<?= $student['school_num']; ?>">編輯</a>
+                <a class="del-btn" href="?inc=delete_student&num=<?= $student['school_num']; ?>">刪除</a>
             </div>
         </div>
     </div>
