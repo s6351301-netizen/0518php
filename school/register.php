@@ -15,33 +15,112 @@
             background-color: #c8e6c9;
             font-family: 'Arial', sans-serif;
             min-height: 100vh;
-            display: flex;
+/*             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 20px;
+            align-items: center; */
+            /* padding: 20px; */
         }
 
         .container {
             background-color: #f1f8f5;
-            padding: 50px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             max-width: 500px;
-            width: 80%;
-            margin:0px 250px 10px 0px;
+            width: 100%;
+            margin: 40px auto;
         }
 
-        .container1{
-            background-color: #e8f5e9;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 50%;
-            margin: 0px 50px 10px 0px;
-        }    
+        /* 頂部導航欄 */
+        .navbar {
+            background: linear-gradient(135deg, #2e7d32 0%, #388e3c 100%);
+            padding: 0;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
 
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            height: 70px;
+        }
 
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .nav-logo span {
+            font-size: 28px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #ffc107;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .btn-login, .btn-register {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-login {
+            background-color: #ffc107;
+            color: #2e7d32;
+        }
+
+        .btn-login:hover {
+            background-color: #ffb300;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 193, 7, 0.3);
+        }
+
+        .btn-register {
+            background-color: #ff9800;
+            color: white;
+        }
+
+        .btn-register:hover {
+            background-color: #f57c00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 152, 0, 0.3);
+        }
 
         .form-header {
             text-align: center;
@@ -161,35 +240,27 @@
             font-size: 12px;
             margin-top: 20px;
         }
-
-
     </style>
 </head>
 <body>
-<div class="container1">
-    <h2>簡易註冊系統</h2>
-    <ul>
-        <li>建立一個資料表來存放使用者的帳號、密碼及個人資料</li>
-        <li>建立一個網頁表單可以讓使用者輸入自己的帳號、密碼及個人資料</li>
-        <li>送出表單後可以將使用者的資料存入資料表</li>
-    </ul>
-    <h3>資料表設計-members</h3>
-    <ul>
-        <li>id</li>
-        <li>account</li>
-        <li>password</li>
-        <li>tel</li>
-        <li>birthday</li>
-        <li>email</li>
-    </ul>
-    <h3>註冊表單設計</h3>
-    <ul>
-        <li>清新簡約風</li>
-        <li>整體底色是淺綠色</li>
-        <li>文字以黃色或橘色做搭配</li>
-        <li>表單輸入欄位都要有圓角</li>
-    </ul>
-</div>
+    <!-- 頂部導航欄 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <span>🏫</span>
+                翠園高中
+            </a>
+            <ul class="nav-links">
+                <li><a href="#about">關於我們</a></li>
+                <li><a href="#news">最新消息</a></li>
+                <li><a href="#contact">聯絡方式</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.php" class="btn-login">登入</a>
+                <a href="register.php" class="btn-register">註冊</a>
+            </div>
+        </div>
+    </nav>
    <div class="container">
         <div class="form-header">
             <h1>會員註冊</h1>
