@@ -23,25 +23,12 @@
 
         .container {
             background-color: #f1f8f5;
-            padding: 50px;
+            padding: 40px;
             border-radius: 15px;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             max-width: 500px;
-            width: 80%;
-            margin:0px 250px 10px 0px;
+            width: 100%;
         }
-
-        .container1{
-            background-color: #e8f5e9;
-            padding: 30px;
-            border-radius: 15px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
-            width: 50%;
-            margin: 0px 50px 10px 0px;
-        }    
-
-
 
         .form-header {
             text-align: center;
@@ -161,12 +148,10 @@
             font-size: 12px;
             margin-top: 20px;
         }
-
-
     </style>
 </head>
 <body>
-<div class="container1">
+<div>
     <h2>簡易註冊系統</h2>
     <ul>
         <li>建立一個資料表來存放使用者的帳號、密碼及個人資料</li>
